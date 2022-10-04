@@ -1,0 +1,17 @@
+class palindrome {
+    public static void main(String inp[]){
+        String rev="";
+        int len = inp[0].length();
+
+        for(int i=len-1;i>=0;i--){
+              rev=rev+(inp[0].charAt(i));
+        }
+        if (rev.equals(inp[0])){
+            System.out.println("String is palindrome");
+        }
+        else{
+            System.out.println("string is not palindrome");
+
+        }
+    }
+}
