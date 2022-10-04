@@ -1,0 +1,21 @@
+class sorting {
+       public static void main(String args[]){
+              String name[]={"kundan","abhi","manish","nitin","baldev"};
+              char temp1,temp2;
+              int len=name.length;
+              for(int i=0;i<len;i++){
+                        for(int j=0;j<(len-i)-1;j++){
+                               temp1=name[j].charAt(0);
+                               temp2=name[j+1].charAt(0);
+                               if(temp1>temp2){
+                                    String temp=name[j];
+                                    name[j]=name[j+1];
+                                    name[j+1]=temp;
+                               }
+                        }
+              }
+              for(int k=0;k<len;k++){
+                System.out.println(name[k]);
+              }
+       }
+}
