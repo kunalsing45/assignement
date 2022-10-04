@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+class square {
+    public static void main(String args[]) {
+        int len;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter the range:");
+        len= scan.nextInt();
+        scan.close();
+       for(int i=0;i<=len;i++){
+           System.out.println(i*i);
+       }
+    }
+
+}
