@@ -34,7 +34,6 @@ class student {
             System.out.println("marks obtain:");
             marks[i] = scan.nextInt();
         }
-        scan.close();
         // percentage
         result = (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]) / 5f;
         // division
@@ -59,34 +58,29 @@ class student {
         }
         System.out.println("percentage: " + result);
         System.out.println("division:" + div);
-
     }
 
     public static void main(String args[]) {
-        student arr[] = new student[5];
+        
         Scanner scan = new Scanner(System.in);
 
         System.out.println("enter no. of students: ");
         int len = scan.nextInt();
-
+        student arr[] = new student[len];
         for (int i = 0; i < len; i++) {
 
             System.out.println("enter the data of (" + (i + 1) + ") student\n");
 
-            student temp = new student();
+            arr[i] = new student();
 
             System.out.println("enter the roll no . : ");
-            temp.rollno = scan.nextInt();
+            arr[i].rollno = scan.nextInt();
 
             System.out.println("enter the name: ");
-            temp.name = scan.next();
+            arr[i].name = scan.next();
 
-            temp.inp_marks();
-
-            arr[i] = temp;
-
+            arr[i].inp_marks();
         }
-        scan.close();
         System.out.println("data stored :=\n");
         for (int j = 0; j < len; j++) {
             arr[j].display();
